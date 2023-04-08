@@ -1,5 +1,23 @@
 #!/bin/bash
+echo ''
+echo '**********************************************************************************************************************************'
+echo "*                                                                                                                                *"
+echo "* Author: Kharim Mchatta                                                                                                         *"
+echo "*                                                                                                                                *"
+echo "* Tool-Name: Subhunt                                                                                                             *"
+echo "*                                                                                                                                *"
+echo "* Version: 1.0                                                                                                                   *"
+echo "*                                                                                                                                *"
+echo "* Subhunt is a tool that will help you in listing subdomain of your target domain                                                *"
+echo "*                                                                                                                                *"
+echo "* Disclaimer: the tool is not intended for malicious use, any malicious use of the tool shall not hold the author responsible.   *"
+echo "*                                                                                                                                *"
+echo "**********************************************************************************************************************************"
 
+echo ""
+echo ""
+echo ""
+echo ""
 read -p 'enter the target domain name (example.com): ' domain
 echo ''
 echo ''
