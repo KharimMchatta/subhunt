@@ -50,3 +50,5 @@ echo "$(grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}|([a-zA-Z0-9]+\.){1,}[a-zA-Z]{2,}' 
 # save output
 echo "$(grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}|([a-zA-Z0-9]+\.){1,}[a-zA-Z]{2,}' <<< $response | awk '{ if ($0 ~ /^[0-9]/) { ip=$0; } else { printf("%-30s %s\n", $0, ip); } }'| grep -v -E "xlsx|png|html|css|js|hackertarget\.com|dbaeur030138\.inbound\.protection\.outlook\.com|tz\.mail\.protection\.outlook\.com|favicon\.ico|DNSdumpster\.com|am7eur030202\.inbound\.protection\.outlook\.com|dnsdumpster\.com|exampledomain\.com|HackerTarget\.com|api\.hackertarget\.com")" > "$output"
 
+#display only the subdomain
+echo "$(grep -Eo '([a-zA-Z0-9]+\.){1,}[a-zA-Z]{2,}' <<< $response | awk '{ if ($0 ~ /^[0-9]/) { ip=$0; } else { printf("%-30s %s\n", $0, ip); } }'| grep -v -E "xlsx|png|html|css|js|hackertarget\.com|dbaeur030138\.inbound\.protection\.outlook\.com|tz\.mail\.protection\.outlook\.com|favicon\.ico|DNSdumpster\.com|am7eur030202\.inbound\.protection\.outlook\.com|dnsdumpster\.com|exampledomain\.com|HackerTarget\.com|api\.hackertarget\.com")" > subdomain-no-ip.txt
